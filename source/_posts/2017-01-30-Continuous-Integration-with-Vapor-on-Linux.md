@@ -36,7 +36,11 @@ You can basically setup your runner everywhere you want e.g.:
 
 You basically just need a Linux machine :-)
 
-### Install GitLab runner software
+### Using the Nodes vagrant machine
+
+... Easy setup will be written soon
+
+### Manual install GitLab runner
 
 (Our guide will use Ubuntu 16.04)
 
