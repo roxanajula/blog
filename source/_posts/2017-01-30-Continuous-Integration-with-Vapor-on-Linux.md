@@ -78,6 +78,40 @@ You runner is now setup, and ready to handle CI tasks from your project :-D
 
 ## Setup .gitlab-ci.yml
 
+You need a file in your Vapor project called: .gitlab-ci.yml
+
+Here is a small example:
+
+```
+before_script:
+    - eval $(ssh-agent)
+    - ssh-add ~/.ssh/id_rsa
+    - export PATH=/swift/usr/bin:"${PATH}"
+unit_test:
+    script:
+        - vapor build
+        - vapor test
+    tags:
+        - vapor
+```
+
+(It expects swift to be located in the path **/swift/** if you use the Nodes vagrant machine, this will be the latest version.
+
+The Nodes vagrant machine also allows you to use a specific version, if i e.g. Want swift version 3.0.1:
+
+```
+before_script:
+    - eval $(ssh-agent)
+    - ssh-add ~/.ssh/id_rsa
+    - export PATH=/swift-3-0-1/usr/bin:"${PATH}"
+unit_test:
+    script:
+        - vapor build
+        - vapor test
+    tags:
+        - vapor
+```
+
 ## Push your project to gitlab
 
 ### See logging, and figure out what goes wrong
