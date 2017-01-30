@@ -61,3 +61,13 @@ Setup the runner (This part will ask you some questions)
 ```
 sudo gitlab-ci-multi-runner register
 ```
+
+### Find your Runner Token
+
+## Setup .gitlab-ci.yml
+
+## Push your project to gitlab
+
+### See logging, and figure out what goes wrong
+
+## Find more information about GitLab CI
