@@ -60,7 +60,19 @@ Setup the runner (This part will ask you some questions)
 
 ```
 sudo gitlab-ci-multi-runner register
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com )
+**https://gitlab.com/ci**
+Please enter the gitlab-ci token for this runner
+**my-gitlab-token**
+Please enter the gitlab-ci description for this runner
+**My-Vapor-Runner**
+INFO[0034] fcf5c619 Registering runner... succeeded
+Please enter the executor: shell, docker, docker-ssh, ssh?
+**shell**
 ```
+
+You runner is now setup, and ready to handle CI tasks from your project :-D
 
 ### Find your Runner Token
 
